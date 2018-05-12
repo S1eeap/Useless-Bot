@@ -6,8 +6,7 @@ url = "https://api.telegram.org/bot506785758:AAHCPrm5smYcV2zGqU4PEGDhson55n_nkcc
 
 
 def get_updates_json(request):
-    params = {'timeout': 100, 'offset': None}
-    response = requests.get(request + 'getUpdates', data=params)
+    response = requests.get(request + 'getUpdates')
     return response.json()
 
 
