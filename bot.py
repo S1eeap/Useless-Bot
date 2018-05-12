@@ -10,10 +10,14 @@ def get_updates_json(request):
     return response.json()
 
 
-def last_update(data):  
-    results = data['result']
-    total_updates = len(results) - 1
-    return results[total_updates]
+def last_update(data):
+    #while True:
+        #try:
+            results = data['result']
+            total_updates = len(results) - 1
+            return results[total_updates]
+        #except:
+         #   sleep(20)
 
 def get_chat_id(update):
     chat_id = update['message']['chat']['id']
